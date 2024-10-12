@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta name="description" content="Yuma Katsuta's Self-Introduction" />
+    <link rel="stylesheet" href="css/loading.css" />
+    <iframe hidden src="partial/head.html" onload="this.replaceWith(...contentDocument.head.childNodes)"></iframe>
+    <title>Yuma Katsuta</title>
+    <link rel="stylesheet" href="css/page/index.css" />
+  </head>
+
+  <body>
+    <div id="home">
+      <div class="loading"><div></div></div>
+
+      <iframe
+        hidden
+        src="partial/bgAnimation.html"
+        onload="this.replaceWith(...contentDocument.body.childNodes)"
+      ></iframe>
+
+      <video class="video_inkPink" src="vid/ink_paint_pink-hd.mp4" loop autoplay muted></video>
+
+      <header>
+        <div class="header_contents">
+          <nav>
+            <ul class="headerNav">
+              <li class="headerNav_item">
+                <a class="headerNav_link" href="about.html">ABOUT</a>
+              </li>
+              <li class="headerNav_item">
+                <a class="headerNav_link" href="recommend.html">RECOM.</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="intro">
+        <h1 class="intro_title">Yuma Katsuta</h1>
+        <p class="intro_text">Self-Introduction</p>
+      </section>
+
+      <nav class="pageLink">
+        <a href="about.html" class="pageLink_button">
+          <span class="pageLink_button_text">About me</span>
+          <span class="pageLink_button_text-hover">私について</span>
+        </a>
+        <div class="pageLink_fx">
+          <span class="pageLink_fx-circleWavy"></span>
+        </div>
+      </nav>
+
+      <nav class="spLink">
+        <ul>
+          <li>
+            <a href="about.html"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e8eaed"
+              >
+                <path
+                  d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
+                /></svg
+              >NEXT<svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e8eaed"
+              >
+                <path
+                  d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
+                /></svg
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

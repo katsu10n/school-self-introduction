@@ -1,0 +1,117 @@
+.pageLinkWrapper {
+  margin: 3rem 0 6rem;
+}
+
+.pageLink {
+  position: relative;
+  text-align: center;
+  font-family: var(--font-main);
+  font-size: 48px;
+}
+
+.pageLink_button {
+  z-index: 300;
+  display: inline-block;
+  position: relative;
+  text-shadow: 0.05em 0.07em 5px hsl(var(--color-base));
+  transition: all 0.5s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 0.05em;
+    background-color: hsl(var(--color-text));
+    animation: arrowR1 2s ease infinite;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.07em;
+    width: 0.2em;
+    height: 0.2em;
+    border-top: 0.06em solid hsl(var(--color-text));
+    border-right: 0.06em solid hsl(var(--color-text));
+    transform: rotate(45deg);
+    animation: arrowR2 2s ease infinite;
+  }
+  &:hover::before,
+  &:hover::after {
+    display: none;
+  }
+  &:hover {
+    padding: 0.1em 1em 0.2em;
+    border: 2px solid hsl(var(--color-sub), 0.8);
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px -10px hsl(var(--color-sub), 0.8);
+  }
+  &:hover .pageLink_button_text-hover {
+    display: inline;
+  }
+  &:hover .pageLink_button_text {
+    display: none;
+  }
+  &:hover + .pageLink_fx {
+    display: block;
+  }
+}
+
+.pageLink_button_text {
+  animation: fadeIn 1s ease;
+}
+
+.pageLink_button_text-hover {
+  display: none;
+  animation: fadeIn 1s ease;
+}
+/*  */
+.pageLink_fx {
+  display: none;
+  z-index: 0;
+  position: absolute;
+  top: -1.2em;
+  right: 4.25em;
+  left: 0;
+}
+
+.pageLink_fx-circleWavy {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  outline: none;
+  transition: all 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border: 3px solid hsl(var(--color-main));
+    width: 4.3em;
+    height: 4.3em;
+    border-radius: 50%;
+    animation: 1s circleWavy linear infinite;
+  }
+  &::before {
+    animation-delay: 0.5s;
+  }
+}
+
+@media (width < 900px) {
+  .pageLink {
+    font-size: 40px;
+  }
+}
+
+@media (width < 650px) {
+  .pageLink {
+    font-size: 32px;
+  }
+}
+
+@media (width < 650px) {
+  .pageLink {
+    font-size: 24px;
+  }
+}

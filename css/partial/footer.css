@@ -1,0 +1,14 @@
+footer {
+  padding: 1rem 0;
+  background-color: hsl(var(--color-sub));
+  text-align: center;
+
+  a {
+    color: hsl(var(--color-base));
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+:root {
+  --font-base: 'Kosugi Maru', sans-serif;
+  --font-main: 'Kaisei Opti', serif;
+  --font-sub: 'Caveat', cursive;
+
+  --font-size-xl: 2.6rem;
+  --font-size-lg: 2rem;
+  --font-size-md: 1.5rem;
+  --font-size-sm: 1.2rem;
+
+  --line-height-base: 1.8;
+  --letter-spacing: 0.12rem;
+
+  /* --color-text: 191, 38%, 94%;
+  --color-base: 226, 84%, 17%;
+  --color-main: 188, 90%, 31%;
+  --color-sub: 185, 56%, 49%; */
+
+  --color-text: 227, 70%, 16%;
+  --color-base: 40, 100%, 94%;
+  --color-main: 0, 100%, 71%;
+  --color-sub: 344, 100%, 39%;
+}
+
+html,
+body {
+  min-height: 100svh;
+  max-width: 100%;
+  background-color: hsl(var(--color-base));
+  color: hsl(var(--color-text));
+  font-family: var(--font-base);
+  letter-spacing: var(--letter-spacing);
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: hsl(var(--color-text));
+}
+
+p {
+  line-height: var(--line-height-base);
+}
+
+iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img {
+  min-width: 384px;
+  max-height: 320px;
+  object-fit: contain;
+
+  @media (width < 900px) {
+    min-width: auto;
+  }
+}
+
+section {
+  padding: 1.5rem 0;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding: 0 3rem;
+
+  @media (width < 650px) {
+    padding: 0 1.5rem;
+  }
+}
+
+/*  */
+.title-lg {
+  position: sticky;
+  top: 0;
+  margin-bottom: -1rem;
+  font-family: var(--font-main);
+  font-size: var(--font-size-xl);
+  text-align: center;
+  letter-spacing: 0.6em;
+  color: hsl(var(--color-sub));
+  word-wrap: break-word;
+
+  @media (width < 650px) {
+    font-size: var(--font-size-lg);
+  }
+
+  @media (width < 650px) {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    padding-top: 0.5rem;
+    background-color: hsl(var(--color-base), 0.8);
+  }
+}
+
+.title-md {
+  padding: 0.4rem 0 0.8rem;
+  font-family: var(--font-main);
+  font-size: var(--font-size-lg);
+  color: hsl(var(--color-sub));
+  text-align: center;
+  letter-spacing: 0.3em;
+  border-top: 2px solid hsl(var(--color-main));
+  border-bottom: 2px solid hsl(var(--color-main));
+
+  @media (width < 650px) {
+    font-size: var(--font-size-md);
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.md {
+  @media (width < 650px) {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @media (width < 650px) {
+    display: block;
+  }
+}
+
+.pageLinkWrapper {
+  @media (width < 650px) {
+    margin: -2rem 0 2rem !important;
+  }
+}
+
+/*  */
+.aboutContents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+  padding: 1.5rem 0;
+
+  @media (width < 650px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    max-width: 100%;
+    line-height: var(--line-height-base);
+
+    &::before {
+      width: 100%;
+      padding-right: 0.5rem;
+      content: '◇';
+      color: hsl(var(--color-main));
+    }
+  }
+
+  a {
+    width: 90%;
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    @media (width < 650px) {
+      width: 92%;
+      border-bottom: 3px double hsl(var(--color-main));
+    }
+
+    &:hover {
+      color: hsl(var(--color-main));
+    }
+  }
+
+  .mt-min {
+    margin-top: -2rem;
+  }
+  .mt-min2 {
+    margin-top: -1.5rem;
+    margin-bottom: -3rem;
+  }
+}
+
+.aboutContents_title {
+  padding-bottom: 0.5rem;
+  font-size: var(--font-size-md);
+  font-weight: bold;
+
+  @media (width < 650px) {
+    text-align: center;
+  }
+
+  @media (width < 650px) {
+    padding-bottom: 1rem;
+    font-size: var(--font-size-sm);
+  }
+}
+
+.aboutContents_subTitle {
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid hsl(var(--color-main));
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+
+  @media (width < 650px) {
+    text-align: center;
+  }
+
+  @media (width < 650px) {
+    font-size: 1.1rem;
+  }
+}
+
+.spLink {
+  display: none;
+}
+
+@media (width < 650px) {
+  .spLink {
+    z-index: 500;
+    display: block;
+    position: sticky;
+    bottom: 0;
+    padding: 0.25rem 0;
+    background-color: hsl(var(--color-base), 0.8);
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+    }
+
+    a {
+      display: flex;
+      place-content: center;
+      gap: 0.25rem;
+      width: 100%;
+      color: hsl(var(--color-sub));
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+}
